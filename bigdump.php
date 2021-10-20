@@ -11,6 +11,7 @@ error_reporting(E_ALL);
 //               AJAX & CSV functionalities: Krzysiek Herod (kr81uni at wp dot pl) 
 // Copyright:    GPL (C) 2003-2015
 // More Infos:   http://www.ozerov.de/bigdump
+// Translator:   Amir Shokri (amirsh.nll@gmail.com)
 
 // This program is free software; you can redistribute it and/or modify it under the
 // terms of the GNU General Public License as published by the Free Software Foundation;
@@ -147,130 +148,39 @@ if (is_dir(PLUGIN_DIR))
 do_action('header');
 
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <html>
 <head>
-<title>BigDump ver. <?php echo (VERSION); ?></title>
-<meta http-equiv="CONTENT-TYPE" content="text/html; charset=iso-8859-1"/>
-<meta http-equiv="CONTENT-LANGUAGE" content="EN"/>
+<title>کتابخانه ی BigDump نسخه ی <?php echo (VERSION); ?> (نسخه فارسی)</title>
+<meta charset="UTF-8" />
 
-<meta http-equiv="Cache-Control" content="no-cache/"/>
-<meta http-equiv="Pragma" content="no-cache"/>
-<meta http-equiv="Expires" content="-1"/>
-<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Cache-Control" content="no-cache/" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+<meta name="robots" content="noindex, nofollow" />
 
 <?php do_action('head_meta'); ?>
 
 <style type="text/css">
 <!--
 
-body
-{ background-color:#FFFFF0;
-}
-
-h1 
-{ font-size:20px;
-  line-height:24px;
-  font-family:Arial,Helvetica,sans-serif;
-  margin-top:5px;
-  margin-bottom:5px;
-}
-
-p,td,th
-{ font-size:14px;
-  line-height:18px;
-  font-family:Arial,Helvetica,sans-serif;
-  margin-top:5px;
-  margin-bottom:5px;
-  text-align:justify;
-  vertical-align:top;
-}
-
-p.centr
-{ 
-  text-align:center;
-}
-
-p.smlcentr
-{ font-size:10px;
-  line-height:14px;
-  text-align:center;
-}
-
-p.error
-{ color:#FF0000;
-  font-weight:bold;
-}
-
-p.success
-{ color:#00DD00;
-  font-weight:bold;
-}
-
-p.successcentr
-{ color:#00DD00;
-  background-color:#DDDDFF;
-  font-weight:bold;
-  text-align:center;
-}
-
-td
-{ background-color:#F8F8F8;
-  text-align:left;
-}
-
-td.transparent
-{ background-color:#FFFFF0;
-}
-
-th
-{ font-weight:bold;
-  color:#FFFFFF;
-  background-color:#AAAAEE;
-  text-align:left;
-}
-
-td.right
-{ text-align:right;
-}
-
-form
-{ margin-top:5px;
-  margin-bottom:5px;
-}
-
-div.skin1
-{
-  border-color:#3333EE;
-  border-width:5px;
-  border-style:solid;
-  background-color:#AAAAEE;
-  text-align:center;
-  vertical-align:middle;
-  padding:3px;
-  margin:1px;
-}
-
-td.bg3
-{ background-color:#EEEE99;
-  text-align:left;
-  vertical-align:top;
-  width:20%;
-}
-
-th.bg4
-{ background-color:#EEAA55;
-  text-align:left;
-  vertical-align:top;
-  width:20%;
-}
-
-td.bgpctbar
-{ background-color:#EEEEAA;
-  text-align:left;
-  vertical-align:middle;
-  width:80%;
-}
+body{background-color:#fff}
+h1{font-size:12px;line-height:24px;font-family:tahoma;margin-top:5px;margin-bottom:5px}
+p,td,th{font-size:12px;line-height:18px;font-family:tahoma;margin-top:5px;margin-bottom:5px;text-align:justify;vertical-align:top}
+p.centr{text-align:center}
+p.smlcentr{font-size:12px;line-height:14px;text-align:center}
+p.error{color:red;font-weight:700}
+p.success{color:#0D0;font-weight:700}
+p.successcentr{color:#0D0;background-color:#DDF;font-weight:700;text-align:center}
+td{background-color:#F8F8F8;text-align:left}
+td.transparent{background-color:#FFFFF0}
+th{font-weight:700;color:#FFF;background-color:#AAE;text-align:left}
+td.right{text-align:right}
+form{margin-top:5px;margin-bottom:5px}
+div.skin1{border-color:#16a085;color:#fff;border-width:5px;border-style:solid;background-color:#1abc9c;text-align:center;vertical-align:middle;padding:3px;margin:1px;border-radius:25px}
+td.bg3{background-color:#EE9;text-align:left;vertical-align:top;width:20%}
+th.bg4{background-color:#EA5;text-align:left;vertical-align:top;width:20%}
+td.bgpctbar{background-color:#EEA;text-align:left;vertical-align:middle;width:80%}
 
 <?php do_action('head_style'); ?>
 
@@ -279,14 +189,14 @@ td.bgpctbar
 
 </head>
 
-<body>
+<body dir="rtl">
 
 <center>
 
 <table width="780" cellspacing="0" cellpadding="0">
 <tr><td class="transparent">
 
-<!-- <h1>BigDump: Staggered MySQL Dump Importer ver. <?php echo (VERSION); ?></h1> -->
+<!-- <h1>کتابخانه ی BigDump وارد کننده ی  MySQL نسخه   <?php echo (VERSION); ?> (نسخه فارسی)</h1> -->
 
 <?php
 
@@ -301,7 +211,7 @@ function skin_close()
 }
 
 skin_open();
-echo ('<h1>BigDump: Staggered MySQL Dump Importer v'.VERSION.'</h1>');
+echo ('<h1>کتابخانه ی BigDump وارد کننده ی  MySQL نسخه   '.VERSION.' (نسخه فارسی)</h1>');
 skin_close();
 
 do_action('after_headline');
@@ -312,14 +222,14 @@ $file  = false;
 // Check PHP version
 
 if (!$error && !function_exists('version_compare'))
-{ echo ("<p class=\"error\">PHP version 4.1.0 is required for BigDump to proceed. You have PHP ".phpversion()." installed. Sorry!</p>\n");
+{ echo ("<p class=\"error\">برای پردازش BigDump نیاز به نسخه ی پی اچ پی 4.1.0 یا بالاتر دارید. نسخه ی فعلی پی اچ پی شما ".phpversion()." می باشد. متاسفیم!</p>\n");
   $error=true;
 }
 
 // Check if mysql extension is available
 
 if (!$error && !function_exists('mysqli_connect'))
-{ echo ("<p class=\"error\">There is no mySQLi extension found in your PHP installation. You can use an older Bigdump version if your PHP supports mySQL extension.</p>\n");
+{ echo ("<p class=\"error\">هیچ افزونه mySQLi در نصب PHP شما یافت نمی شود. اگر PHP شما از پسوند mySQL پشتیبانی می کند ، می توانید از نسخه قدیمی Bigdump استفاده کنید.</p>\n");
   $error=true;
 }
 
@@ -360,21 +270,21 @@ if (!$error && isset($_REQUEST["uploadbutton"]))
     do_action('file_uploaded');
 
     if (file_exists($uploaded_filename))
-    { echo ("<p class=\"error\">File $uploaded_filename already exist! Delete and upload again!</p>\n");
+    { echo ("<p class=\"error\">فایل $uploaded_filename از قبل موجود است. لطفا ابتدا فایل را حذف کنید و مجددا آن را آپلود کنید! می توانید نام فایل آپلودی را تغییر دهید و مجدد امتحان کنید.</p>\n");
     }
     else if (!preg_match("/(\.(sql|gz|csv))$/i",$uploaded_filename))
-    { echo ("<p class=\"error\">You may only upload .sql .gz or .csv files.</p>\n");
+    { echo ("<p class=\"error\">فقط می توانید فایل های .sql .gz یا .csv را بارگذاری کنید.</p>\n");
     }
     else if (!@move_uploaded_file($_FILES["dumpfile"]["tmp_name"],$uploaded_filepath))
-    { echo ("<p class=\"error\">Error moving uploaded file ".$_FILES["dumpfile"]["tmp_name"]." to the $uploaded_filepath</p>\n");
-      echo ("<p>Check the directory permissions for $upload_dir (must be 777)!</p>\n");
+    { echo ("<p class=\"error\">خطای آپلود فایل ".$_FILES["dumpfile"]["tmp_name"]." در مسیر  $uploaded_filepath</p>\n");
+      echo ("<p>مجوز مسیر $upload_dir باید حتما 777 باشد.</p>\n");
     }
     else
-    { echo ("<p class=\"success\">Uploaded file saved as $uploaded_filename</p>\n");
+    { echo ("<p class=\"success\">فایل بارگذاری شده به عنوان $uploaded_filename ذخیره شد</p>\n");
     }
   }
   else
-  { echo ("<p class=\"error\">Error uploading file ".$_FILES["dumpfile"]["name"]."</p>\n");
+  { echo ("<p class=\"error\">خطای آپلود فایل  ".$_FILES["dumpfile"]["name"]."</p>\n");
   }
 }
 
@@ -383,9 +293,9 @@ if (!$error && isset($_REQUEST["uploadbutton"]))
 
 if (!$error && isset($_REQUEST["delete"]) && $_REQUEST["delete"]!=basename($_SERVER["SCRIPT_FILENAME"]))
 { if (preg_match("/(\.(sql|gz|csv))$/i",$_REQUEST["delete"]) && @unlink($upload_dir.'/'.$_REQUEST["delete"])) 
-    echo ("<p class=\"success\">".$_REQUEST["delete"]." was removed successfully</p>\n");
+    echo ("<p class=\"success\">".$_REQUEST["delete"]." با موفقیت حذف شد.</p>\n");
   else
-    echo ("<p class=\"error\">Can't remove ".$_REQUEST["delete"]."</p>\n");
+    echo ("<p class=\"error\">حذف امکان پذیر نیست  ".$_REQUEST["delete"]."</p>\n");
 }
 
 // Connect to the database, set charset and execute pre-queries
@@ -394,8 +304,8 @@ if (!$error && !TESTMODE)
 { $mysqli = new mysqli($db_server, $db_username, $db_password, $db_name);
   
   if (mysqli_connect_error()) 
-  { echo ("<p class=\"error\">Database connection failed due to ".mysqli_connect_error()."</p>\n");
-    echo ("<p>Edit the database settings in BigDump configuration, or contact your database provider.</p>\n");
+  { echo ("<p class=\"error\">خطای اتصال به پایگاه داده ".mysqli_connect_error()."</p>\n");
+    echo ("<p>تنظیمات پایگاه داده را در پیکربندی BigDump ویرایش کنید یا با سرویس دهنده پایگاه داده خود تماس بگیرید.</p>\n");
     $error=true;
   }
   if (!$error && $db_connection_charset!=='')
@@ -405,7 +315,7 @@ if (!$error && !TESTMODE)
   { reset($pre_query);
     foreach ($pre_query as $pre_query_value)
     {	if (!$mysqli->query($pre_query_value))
-    	{ echo ("<p class=\"error\">Error with pre-query.</p>\n");
+    	{ echo ("<p class=\"error\">خطا در کوئری</p>\n");
       	echo ("<p>Query: ".trim(nl2br(htmlentities($pre_query_value)))."</p>\n");
       	echo ("<p>MySQL: ".$mysqli->error."</p>\n");
       	$error=true;
@@ -441,7 +351,7 @@ if (!$error && !isset($_REQUEST["fn"]) && $filename=="")
         if ($dirfile != "." && $dirfile != ".." && $dirfile!=basename($_SERVER["SCRIPT_FILENAME"]) && preg_match("/\.(sql|gz|csv)$/i",$dirfile))
         { if (!$dirhead)
           { echo ("<table width=\"100%\" cellspacing=\"2\" cellpadding=\"2\">\n");
-            echo ("<tr><th>Filename</th><th>Size</th><th>Date&amp;Time</th><th>Type</th><th>&nbsp;</th><th>&nbsp;</th>\n");
+            echo ("<tr><th>نام فایل</th><th>اندازه</th><th>تاریخ &amp; ساعت</th><th>نوع</th><th>&nbsp;</th><th>&nbsp;</th>\n");
             $dirhead=true;
           }
           echo ("<tr><td>$dirfile</td><td class=\"right\">".filesize($upload_dir.'/'.$dirfile)."</td><td>".date ("Y-m-d H:i:s", filemtime($upload_dir.'/'.$dirfile))."</td>");
@@ -456,7 +366,7 @@ if (!$error && !isset($_REQUEST["fn"]) && $filename=="")
             echo ("<td>Misc</td>");
 
           if ((preg_match("/\.gz$/i",$dirfile) && function_exists("gzopen")) || preg_match("/\.sql$/i",$dirfile) || preg_match("/\.csv$/i",$dirfile))
-            echo ("<td><a href=\"".$_SERVER["PHP_SELF"]."?start=1&amp;fn=".urlencode($dirfile)."&amp;foffset=0&amp;totalqueries=0&amp;delimiter=".urlencode($delimiter)."\">Start Import</a> into $db_name at $db_server</td>\n <td><a href=\"".$_SERVER["PHP_SELF"]."?delete=".urlencode($dirfile)."\">Delete file</a></td></tr>\n");
+            echo ("<td><a href=\"".$_SERVER["PHP_SELF"]."?start=1&amp;fn=".urlencode($dirfile)."&amp;foffset=0&amp;totalqueries=0&amp;delimiter=".urlencode($delimiter)."\">وارد کنید</a> در $db_name از $db_server</td>\n <td><a href=\"".$_SERVER["PHP_SELF"]."?delete=".urlencode($dirfile)."\">حذف فایل</a></td></tr>\n");
 // TODO: echo ("<td><a href=\"".$_SERVER["PHP_SELF"]."?start=1&amp;fn=".urlencode($dirfile)."&amp;foffset=0&amp;totalqueries=0&amp;delimiter=".urlencode($delimiter)."\">Start Import</a></td>\n <td><a href=\"".$_SERVER["PHP_SELF"]."?delete=".urlencode($dirfile)."\">Delete file</a></td></tr>\n");
           else
             echo ("<td>&nbsp;</td>\n <td>&nbsp;</td></tr>\n");
@@ -467,10 +377,10 @@ if (!$error && !isset($_REQUEST["fn"]) && $filename=="")
     if ($dirhead) 
       echo ("</table>\n");
     else 
-      echo ("<p>No uploaded SQL, GZ or CSV files found in the working directory</p>\n");
+      echo ("<p>هیچ فایل SQL ، GZ یا CSV بارگذاری شده در مسیر برنامه یافت نشد</p>\n");
   }
   else
-  { echo ("<p class=\"error\">Error listing directory $upload_dir</p>\n");
+  { echo ("<p class=\"error\">خطایی در $upload_dir یافت شد.</p>\n");
     $error=true;
   }
 }
@@ -479,7 +389,7 @@ if (!$error && !isset($_REQUEST["fn"]) && $filename=="")
 // Single file mode
 
 if (!$error && !isset ($_REQUEST["fn"]) && $filename!="")
-{ echo ("<p><a href=\"".$_SERVER["PHP_SELF"]."?start=1&amp;fn=".urlencode($filename)."&amp;foffset=0&amp;totalqueries=0\">Start Import</a> from $filename into $db_name at $db_server</p>\n");
+{ echo ("<p><a href=\"".$_SERVER["PHP_SELF"]."?start=1&amp;fn=".urlencode($filename)."&amp;foffset=0&amp;totalqueries=0\">وارد کنید</a> از $filename در $db_name از $db_server</p>\n");
 }
 
 
@@ -492,15 +402,15 @@ if (!$error && !isset($_REQUEST["fn"]) && $filename=="")
 
   do { $tempfilename=$upload_dir.'/'.time().".tmp"; } while (file_exists($tempfilename)); 
   if (!($tempfile=@fopen($tempfilename,"w")))
-  { echo ("<p>Upload form disabled. Permissions for the working directory <i>$upload_dir</i> <b>must be set writable for the webserver</b> in order ");
-    echo ("to upload files here. Alternatively you can upload your dump files via FTP.</p>\n");
+  { echo ("<p>بارگذاری فرم غیرفعال شده است. مجوزها برای مسیر <i>$upload_dir</i> <b> باید برای سرور وب قابل نوشتن باشد</b>");
+    echo ("برای بارگذاری فایلها در اینجا روش دیگر این است که می توانید فایل های خود را از طریق FTP بارگذاری کنید.</p>\n");
   }
   else
   { fclose($tempfile);
     unlink ($tempfilename);
  
-    echo ("<p>You can now upload your dump file up to $upload_max_filesize bytes (".round ($upload_max_filesize/1024/1024)." Mbytes)  ");
-    echo ("directly from your browser to the server. Alternatively you can upload your dump files of any size via FTP.</p>\n");
+    echo ("<p>شما می توانید فایل $upload_max_filesize بایت را آپلود کنید  (".round ($upload_max_filesize/1024/1024)." مگابایت)  ");
+    echo ("مستقیماً از مرورگر خود به سرور. می توانید فایل هایی که می خواهید وارد کنید را در هر اندازه از طریق FTP بارگذاری کنید.</p>\n");
 ?>
 <form method="POST" action="<?php echo ($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
 <input type="hidden" name="MAX_FILE_SIZE" value="$upload_max_filesize">
@@ -520,7 +430,7 @@ if (!$error && !TESTMODE && !isset($_REQUEST["fn"]))
   { $row = $result->fetch_assoc();
     if ($row) 
     { $charset = $row['Value'];
-      echo ("<p>Note: The current mySQL connection charset is <i>$charset</i>. Your dump file must be encoded in <i>$charset</i> in order to avoid problems with non-latin characters. You can change the connection charset using the \$db_connection_charset variable in bigdump.php</p>\n");
+      echo ("<p>نکته: اتصال mySQL شما با نوع کاراکتر <i>$charset</i> تنظیم شده است. شما باید نوع encode مورد نظر خود را  به<i>$charset</i> تغییر دهید که موارد غیر لاتین را نیز پشتیبانی کند. شما می توانید Encode را به  \$db_connection_charset در متغیرهای bigdump.php تغییر دهید.</p>\n");
     }
     $result->free();
   }
@@ -548,10 +458,10 @@ if (!$error && isset($_REQUEST["start"]))
     $gzipmode=false;
 
   if ((!$gzipmode && !$file=@fopen($upload_dir.'/'.$curfilename,"r")) || ($gzipmode && !$file=@gzopen($upload_dir.'/'.$curfilename,"r")))
-  { echo ("<p class=\"error\">Can't open ".$curfilename." for import</p>\n");
-    echo ("<p>Please, check that your dump file name contains only alphanumerical characters, and rename it accordingly, for example: $curfilename.".
-           "<br>Or, specify \$filename in bigdump.php with the full filename. ".
-           "<br>Or, you have to upload the $curfilename to the server first.</p>\n");
+  { echo ("<p class=\"error\">نمی توان ".$curfilename." را برای وارد کردن باز کرد</p>\n");
+    echo ("<p>لطفاً بررسی کنید که نام فایل شما فقط شامل نویسه های عددی باشد و بر این اساس نام آن را تغییر دهید ، به عنوان مثال:  $curfilename".
+           "<br>یا نام فایل  \$filename در  bigdump.php  را کامل وارد کنید".
+           "<br>یا از ابتدا $curfilename را آپلود کنید.</p>\n");
     $error=true;
   }
 
@@ -562,14 +472,14 @@ if (!$error && isset($_REQUEST["start"]))
     else $filesize = gztell($file);                   // Always zero, ignore
   }
   else
-  { echo ("<p class=\"error\">I can't seek into $curfilename</p>\n");
+  { echo ("<p class=\"error\">نمی توان $curfilename را جستجو کرد</p>\n");
     $error=true;
   }
 
 // Stop if csv file is used, but $csv_insert_table is not set
 
   if (!$error && ($csv_insert_table == "") && (preg_match("/(\.csv)$/i",$curfilename)))
-  { echo ("<p class=\"error\">You have to specify \$csv_insert_table when using a CSV file. </p>\n");
+  { echo ("<p class=\"error\">هنگام استفاده از یک فایل CSV باید \$csv_insert_table را مشخص کنید. </p>\n");
     $error=true;
   }
 }
@@ -587,7 +497,7 @@ if (!$error && isset($_REQUEST["start"]) && isset($_REQUEST["foffset"]) && preg_
 // Check start and foffset are numeric values
 
   if (!is_numeric($_REQUEST["start"]) || !is_numeric($_REQUEST["foffset"]))
-  { echo ("<p class=\"error\">UNEXPECTED: Non-numeric values for start and foffset</p>\n");
+  { echo ("<p class=\"error\">مقادیر غیر عددی برای شروع و باز شدن</p>\n");
     $error=true;
   }
   else
@@ -606,7 +516,7 @@ if (!$error && isset($_REQUEST["start"]) && isset($_REQUEST["foffset"]) && preg_
   { 
     $query = "DELETE FROM `$csv_insert_table`";
     if (!TESTMODE && !$mysqli->query(trim($query)))
-    { echo ("<p class=\"error\">Error when deleting entries from $csv_insert_table.</p>\n");
+    { echo ("<p class=\"error\">خطا هنگام حذف ورودی ها از $csv_insert_table</p>\n");
       echo ("<p>Query: ".trim(nl2br(htmlentities($query)))."</p>\n");
       echo ("<p>MySQL: ".$mysqli->error."</p>\n");
       $error=true;
@@ -618,23 +528,23 @@ if (!$error && isset($_REQUEST["start"]) && isset($_REQUEST["foffset"]) && preg_
   if (!$error)
   { skin_open();
     if (TESTMODE) 
-      echo ("<p class=\"centr\">TEST MODE ENABLED</p>\n");
-    echo ("<p class=\"centr\">Processing file: <b>".$curfilename."</b></p>\n");
-    echo ("<p class=\"smlcentr\">Starting from line: ".$_REQUEST["start"]."</p>\n");	
+      echo ("<p class=\"centr\">حالت تست فعال شد</p>\n");
+    echo ("<p class=\"centr\">فایل پردازش شده: <b>".$curfilename."</b></p>\n");
+    echo ("<p class=\"smlcentr\">شروع از خط: ".$_REQUEST["start"]."</p>\n");	
     skin_close();
   }
 
 // Check $_REQUEST["foffset"] upon $filesize (can't do it on gzipped files)
 
   if (!$error && !$gzipmode && $_REQUEST["foffset"]>$filesize)
-  { echo ("<p class=\"error\">UNEXPECTED: Can't set file pointer behind the end of file</p>\n");
+  { echo ("<p class=\"error\">نمی توان اشاره گر فایل را در انتهای فایل تنظیم کرد</p>\n");
     $error=true;
   }
 
 // Set file pointer to $_REQUEST["foffset"]
 
   if (!$error && ((!$gzipmode && fseek($file, $_REQUEST["foffset"])!=0) || ($gzipmode && gzseek($file, $_REQUEST["foffset"])!=0)))
-  { echo ("<p class=\"error\">UNEXPECTED: Can't set file pointer to offset: ".$_REQUEST["foffset"]."</p>\n");
+  { echo ("<p class=\"error\">نمی توان نشانگر فایل را به حالت افست تنظیم کرد: ".$_REQUEST["foffset"]."</p>\n");
     $error=true;
   }
 
@@ -744,12 +654,12 @@ if (!$error && isset($_REQUEST["start"]) && isset($_REQUEST["foffset"]) && preg_
 
       if ($querylines>$max_query_lines)
       {
-        echo ("<p class=\"error\">Stopped at the line $linenumber. </p>");
-        echo ("<p>At this place the current query includes more than ".$max_query_lines." dump lines. That can happen if your dump file was ");
-        echo ("created by some tool which doesn't place a semicolon followed by a linebreak at the end of each query, or if your dump contains ");
-        echo ("extended inserts or very long procedure definitions. Please read the <a href=\"http://www.ozerov.de/bigdump/usage/\">BigDump usage notes</a> ");
-        echo ("for more infos. Ask for our support services ");
-        echo ("in order to handle dump files containing extended inserts.</p>\n");
+        echo ("<p class=\"error\">در خط $linenumber متوقف شد.</p>");
+        echo ("<p>درخواست شما بیش از ".$max_query_lines." می باشد  برای همین این اتفاق می افتد.");
+        echo ("بعضی از ابزارها نقطه ویرگول یا سمی کالن را قرار نمی دهند و فقط به خط بعدی می روند ");
+        echo ("در استفاده های بزرگ و حجیم بهتر است  <a href=\"http://www.ozerov.de/bigdump/usage/\">نکات استفاده کنندگان BigDump را بخوانید.</a> ");
+        echo ("برای اطلاعات بیشتر خدمات پشتیبانی این ابزار را از ما بخواهید");
+        echo ("به منظور رسیدگی به این فایل عملیات های insert گسترده استفاق می افتد.</p>\n");
         $error=true;
         break;
       }
@@ -772,7 +682,7 @@ if (!$error && isset($_REQUEST["start"]) && isset($_REQUEST["foffset"]) && preg_
 // echo ("<p>Query: ".trim(nl2br(htmlentities($query)))."</p>\n");
 
         if (!TESTMODE && !$mysqli->query($query))
-        { echo ("<p class=\"error\">Error at the line $linenumber: ". trim($dumpline)."</p>\n");
+        { echo ("<p class=\"error\">خطا در خط  $linenumber: ". trim($dumpline)."</p>\n");
           echo ("<p>Query: ".trim(nl2br(htmlentities($query)))."</p>\n");
           echo ("<p>MySQL: ".$mysqli->error."</p>\n");
           $error=true;
@@ -795,7 +705,7 @@ if (!$error && isset($_REQUEST["start"]) && isset($_REQUEST["foffset"]) && preg_
     else
       $foffset = gztell($file);
     if (!$foffset)
-    { echo ("<p class=\"error\">UNEXPECTED: Can't read the file pointer offset</p>\n");
+    { echo ("<p class=\"error\">نمی توان نشانگر فایل را آفست خواند</p>\n");
       $error=true;
     }
   }
@@ -861,14 +771,14 @@ skin_open();
       $pct_done    = ' ? ';
       $pct_togo    = ' ? ';
       $pct_tota    = 100;
-      $pct_bar     = str_replace(' ','&nbsp;','<tt>[         Not available for gzipped files          ]</tt>');
+      $pct_bar     = str_replace(' ','&nbsp;','<tt>[         فایل های gzipped در دسترس نیست          ]</tt>');
     }
     
     echo ("
     <center>
     <table width=\"520\" border=\"0\" cellpadding=\"3\" cellspacing=\"1\">
-    <tr><th class=\"bg4\"> </th><th class=\"bg4\">Session</th><th class=\"bg4\">Done</th><th class=\"bg4\">To go</th><th class=\"bg4\">Total</th></tr>
-    <tr><th class=\"bg4\">Lines</th><td class=\"bg3\">$lines_this</td><td class=\"bg3\">$lines_done</td><td class=\"bg3\">$lines_togo</td><td class=\"bg3\">$lines_tota</td></tr>
+    <tr><th class=\"bg4\"> </th><th class=\"bg4\">سشن</th><th class=\"bg4\">انجام شده</th><th class=\"bg4\">رفتن</th><th class=\"bg4\">مجموع</th></tr>
+    <tr><th class=\"bg4\">خط ها</th><td class=\"bg3\">$lines_this</td><td class=\"bg3\">$lines_done</td><td class=\"bg3\">$lines_togo</td><td class=\"bg3\">$lines_tota</td></tr>
     <tr><th class=\"bg4\">Queries</th><td class=\"bg3\">$queries_this</td><td class=\"bg3\">$queries_done</td><td class=\"bg3\">$queries_togo</td><td class=\"bg3\">$queries_tota</td></tr>
     <tr><th class=\"bg4\">Bytes</th><td class=\"bg3\">$bytes_this</td><td class=\"bg3\">$bytes_done</td><td class=\"bg3\">$bytes_togo</td><td class=\"bg3\">$bytes_tota</td></tr>
     <tr><th class=\"bg4\">KB</th><td class=\"bg3\">$kbytes_this</td><td class=\"bg3\">$kbytes_done</td><td class=\"bg3\">$kbytes_togo</td><td class=\"bg3\">$kbytes_tota</td></tr>
@@ -882,10 +792,10 @@ skin_open();
 // Finish message and restart the script
 
     if ($linenumber<$_REQUEST["start"]+$linespersession)
-    { echo ("<p class=\"successcentr\">Congratulations: End of file reached, assuming OK</p>\n");
-      echo ("<p class=\"successcentr\">IMPORTANT: REMOVE YOUR DUMP FILE and BIGDUMP SCRIPT FROM SERVER NOW!</p>\n");
-      echo ("<p class=\"centr\">Thank you for using this tool! Please rate <a href=\"http://www.hotscripts.com/listing/bigdump/?RID=403\" target=\"_blank\">Bigdump at Hotscripts.com</a></p>\n");
-      echo ("<p class=\"centr\">You can send me some bucks or euros as appreciation via PayPal. Thank you!</p>\n");
+    { echo ("<p class=\"successcentr\">تبریک: فرآیند انجام شد.</p>\n");
+      echo ("<p class=\"successcentr\">مهم : فایل پایگاه داده و فایل bigdump را از سرور خود حذف کنید.</p>\n");
+      echo ("<p class=\"centr\">با تشکر از شما برای استفاده از این ابزار! لطفاً امتیاز دهید <a href=\"http://www.hotscripts.com/listing/bigdump/?RID=403\" target=\"_blank\">Bigdump در Hotscripts.com</a></p>\n");
+      echo ("<p class=\"centr\">می توانید از طریق PayPal مقداری دلار یا یورو به عنوان حمایت مالی برایم (نویسنده اصلی کتابخانه) ارسال کنید. متشکرم!</p>\n");
 ?>
 
 <!-- Start Paypal donation code -->
@@ -898,7 +808,7 @@ skin_open();
 <input type="hidden" name="tax" value="0" />
 <input type="hidden" name="bn" value="PP-DonationsBF" />
 <input type="hidden" name="lc" value="US" />
-<input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!" />
+<input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif" border="0" name="submit" alt="پرداخت را با PayPal انجام دهید - سریع ، رایگان و ایمن است!" />
 <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
 </form>
 <!-- End Paypal donation code -->
@@ -909,26 +819,26 @@ skin_open();
     }
     else
     { if ($delaypersession!=0)
-        echo ("<p class=\"centr\">Now I'm <b>waiting $delaypersession milliseconds</b> before starting next session...</p>\n");
+        echo ("<p class=\"centr\">حالا   قبل از شروع session بعدی  <b>$delaypersession میلی ثانیه صبر کنید </b></p>\n");
       if (!$ajax) 
         echo ("<script language=\"JavaScript\" type=\"text/javascript\">window.setTimeout('location.href=\"".$_SERVER["PHP_SELF"]."?start=$linenumber&fn=".urlencode($curfilename)."&foffset=$foffset&totalqueries=$totalqueries&delimiter=".urlencode($delimiter)."\";',500+$delaypersession);</script>\n");
 
       echo ("<noscript>\n");
-      echo ("<p class=\"centr\"><a href=\"".$_SERVER["PHP_SELF"]."?start=$linenumber&amp;fn=".urlencode($curfilename)."&amp;foffset=$foffset&amp;totalqueries=$totalqueries&amp;delimiter=".urlencode($delimiter)."\">Continue from the line $linenumber</a> (Enable JavaScript to do it automatically)</p>\n");
+      echo ("<p class=\"centr\"><a href=\"".$_SERVER["PHP_SELF"]."?start=$linenumber&amp;fn=".urlencode($curfilename)."&amp;foffset=$foffset&amp;totalqueries=$totalqueries&amp;delimiter=".urlencode($delimiter)."\">ادامه از خط $linenumber</a> (برای انجام خودکار JavaScript را فعال کنید)</p>\n");
       echo ("</noscript>\n");
    
-      echo ("<p class=\"centr\">Press <b><a href=\"".$_SERVER["PHP_SELF"]."\">STOP</a></b> to abort the import <b>OR WAIT!</b></p>\n");
+      echo ("<p class=\"centr\">Press <b><a href=\"".$_SERVER["PHP_SELF"]."\">متوقف کردن</a></b> وارد کردن را لغو کنید <b> یا صبر کنید!</b></p>\n");
     }
   }
   else 
-    echo ("<p class=\"error\">Stopped on error</p>\n");
+    echo ("<p class=\"error\">با خطا متوقف شد.</p>\n");
 
 skin_close();
 
 }
 
 if ($error)
-  echo ("<p class=\"centr\"><a href=\"".$_SERVER["PHP_SELF"]."\">Start from the beginning</a> (DROP the old tables before restarting)</p>\n");
+  echo ("<p class=\"centr\"><a href=\"".$_SERVER["PHP_SELF"]."\">از ابتدا شروع کنید</a> (قبل از راه اندازی مجدد ، جداول قدیمی را حذف کنید)</p>\n");
 
 if ($mysqli) $mysqli->close();
 if ($file && !$gzipmode) fclose($file);
@@ -936,7 +846,7 @@ else if ($file && $gzipmode) gzclose($file);
 
 ?>
 
-<p class="centr">&copy; 2003-2015 <a href="mailto:alexey@ozerov.de">Alexey Ozerov</a></p>
+<p class="centr">&copy; 2003-2015 <a href="mailto:alexey@ozerov.de">Alexey Ozerov</a> | ترجمه : &copy; 2021 <a href="mailto:amirsh.nll@gmail.com">Amir Shokri</a></p>
 
 </td></tr></table>
 
@@ -1097,7 +1007,7 @@ function create_ajax_script()
 			}
 		}
 		if (!http_request) {
-				alert("Cannot create an XMLHTTP instance");
+				alert("نمی توان نمونه ای از XMLHTTP ساخت.");
 				return false;
 		}
 		http_request.onreadystatechange = server_response;
@@ -1114,7 +1024,7 @@ function create_ajax_script()
 
 	  if (http_request.status != 200) 
 	  {
-	    alert("Page unavailable, or wrong url!")
+	    alert("صفحه در دسترس نیست یا آدرس نادرست است.")
 	    return;
 	  }
 		
@@ -1132,7 +1042,7 @@ function create_ajax_script()
 		
 		// update "Starting from line: "
 		document.getElementsByTagName('p').item(1).innerHTML = 
-			"Starting from line: " + 
+			"شروع از خط: " + 
 			   r.getElementsByTagName('linenumber').item(0).firstChild.nodeValue;
 		
 		// update table with new values
